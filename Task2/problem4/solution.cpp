@@ -15,6 +15,7 @@ int main()
             {
                 x=abs(i-j);
                 if(x<y) y=x;
+                break;
             }
         }
     }
