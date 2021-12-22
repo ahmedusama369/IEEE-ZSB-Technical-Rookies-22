@@ -1,7 +1,6 @@
 import random
-n=random.randint(100, 999)
+n=random.randint(100,999)
 n=str(n)
-print(n)
 j=0
 while(True):
     c=input()
@@ -11,12 +10,10 @@ while(True):
     hit=0
     misses=0
     for i in range(len(n)):
-        for j in range(len(n)):
-            if n[i]==c[j] and i==j:
-                hit=hit+1
-                break
-            elif n[i]==c[j] and i!=j:
-                misses=misses+1
-                break
+        if c[i]==n[i]:
+            hit=hit+1
+        elif c[i] in n and c[i]!=n[i]:
+            misses=misses+1
+   
     print(hit,"hit",misses,"misses")
 print(j)
